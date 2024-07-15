@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import { cn } from "@/lib/utils";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -17,11 +16,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={cn("relative h-full font-sans antialiased", inter.className)}>
-        <main className="relative min-h-screen flex flex-col">
-          <div className="flex-grow flex-1">{children}</div>
-        </main>
-      </body>
+      <body className={inter.className}>{children}</body>
     </html>
   );
 }
